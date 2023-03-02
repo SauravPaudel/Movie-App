@@ -4,6 +4,7 @@ import Header from './components/header/Header';
 import Home from './pages/home/home';
 import MovieList from './components/movieList/movieList';
 import Movie from './pages/movieDetail/movie';
+import Search from './pages/Search'
 
 function App() {
   return (

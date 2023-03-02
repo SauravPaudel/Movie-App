@@ -1,6 +1,8 @@
 import React from "react"
 import "./Header.css"
 import { Link } from "react-router-dom"
+import SearchBox from "../../pages/Search"
+
 
 const Header = () => {
     return (
@@ -9,8 +11,8 @@ const Header = () => {
                 <Link to="/"><img className="header__icon" src="https://www.svgrepo.com/show/166681/movie.svg" /></Link>
                 <Link to="/movies/popular" style={{textDecoration: "none"}}><span>Popular</span></Link>
                 <Link to="/movies/top_rated" style={{textDecoration: "none"}}><span>Top Rated</span></Link>
-                <Link to="/" style={{textDecoration: "none"}}><span>Search</span></Link>
-                <Link to="/" style={{textDecoration: "none"}}><span>Log in</span></Link>
+
+                < SearchBox />
             </div>
         </div> 
     )
