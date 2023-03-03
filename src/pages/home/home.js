@@ -4,16 +4,16 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from 'react-responsive-carousel';
 import { Link } from "react-router-dom";
 import MovieList from "../../components/movieList/movieList";
-import SearchBox from "../Search";
+
+
 
 const Home = () => {
-//
-    const [ setMovies] = useState([]);
-    const [searchValue, setSearchValue] = useState('');
-    const getMovieRequest = async (searchValue) => {
-		const url = `https://api.themoviedb.org/3/movie/popular?s=${searchValue}&apikey=4e44d9029b1270a757cddc766a1bcb63&language=en-US`;
 
-        //https://api.themoviedb.org/3/movie/popular?s=${searchValue}&apikey=4e44d9029b1270a757cddc766a1bcb63&language=en-US
+    const [movie, setMovies] = useState([]);
+	const [searchValue, setSearchValue] = useState('');
+
+	const getMovieRequest = async (searchValue) => {
+		const url = `https://api.themoviedb.org/3/movie/popular?s=${searchValue}&api_key=4e44d9029b1270a757cddc766a1bcb63&language=en-US`;
 
 		const response = await fetch(url);
 		const responseJson = await response.json();
@@ -26,8 +26,6 @@ const Home = () => {
 	useEffect(() => {
 		getMovieRequest(searchValue);
 	}, [searchValue]);
-
-    //
 
     const [ popularMovies, setPopularMovies ] = useState([])
 
@@ -70,7 +68,6 @@ const Home = () => {
                 </Carousel>
                 <MovieList />
             </div>
-            <SearchBox searchValue={searchValue} setSearchValue={setSearchValue} />
         </>
     )
 }
