@@ -3,3 +3,9 @@
   color: white;
   font-family: sans-serif;
 }
+:root {
+  --main-color: #4ad0cc;
+  --secondary-color: #d7e3ef;
+  --box-shadow: 0 0 7px 0 var(--secondary-color);
+  --main-color-hover: #52b1ae;
+}
