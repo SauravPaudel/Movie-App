@@ -36,17 +36,17 @@ const Login = () => {
 
   return (
     <div className={styles.container}>
-      <form className={styles.formLogin} onSubmit={submitHandler} autoComplete="off">
+      <form className={styles.formLogin} onSubmit={submitHandler} autoComplete="off"required>
         <h2>Sign In</h2>
         <div>
           <div>
-            <input type="text" name="email" value={data.email} placeholder="E-mail" onChange={changeHandler} onFocus={focusHandler} autoComplete="off" />
+            <input type="text" name="email" value={data.email} placeholder="E-mail" onChange={changeHandler} onFocus={focusHandler} autoComplete="off" required />
             {/* <img src={emailIcon} alt="" /> */}
           </div>
         </div>
         <div>
           <div>
-            <input type="password" name="password" value={data.password} placeholder="Password" onChange={changeHandler} onFocus={focusHandler} autoComplete="off" />
+            <input type="password" name="password" value={data.password} placeholder="Password" onChange={changeHandler} onFocus={focusHandler} autoComplete="off" required />
             {/* <img src={passwordIcon} alt="" /> */}
           </div>
         </div>
